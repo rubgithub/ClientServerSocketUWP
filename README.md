@@ -1,2 +1,2 @@
 # ClientServerSocketUWP
-UWP Socket communciation in the Background Task
+UWP Socket communciation between Cliente and Background Task
