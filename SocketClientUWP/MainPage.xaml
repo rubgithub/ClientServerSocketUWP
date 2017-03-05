@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="SocketClientUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SocketClientUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Padding="3">
+            <Border Background="AliceBlue">
+                <TextBlock Text="BackGround Task" Margin="5" TextAlignment="Center" FontSize="16"/>
+            </Border>
+            <Button Name="BtnBgServerUnRegister"  Content="Unregister Task and Quit" IsEnabled="False" Click="BtnBGServerUnRegister_OnClick" Margin="5,5,5,0"/>
+            <TextBlock Name="TxtBlkStatusBgTask" Text="Status: Registering..."  Margin="5,5,0,50"/>
+
+            <Border Background="Beige">
+                <TextBlock Text="Client Socket" Margin="5" TextAlignment="Center" FontSize="16"/>
+            </Border>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Button Name="BtnSend" Content="Connect and send" Margin="0,0,5,0" Click="BtnSend_Click"/>
+                <TextBox Name="TxtBoxMessage" PlaceholderText="Send messeage to server"/>
+            </StackPanel>
+            <TextBlock Name="TxtBlkClientRec" Text="Received:" Margin="5,0,5,50"/>
+
+
+            <Border Background="Aquamarine">
+                <TextBlock Text="BackGround Server" Margin="5" TextAlignment="Center" FontSize="16"/>
+            </Border>
+            <StackPanel Margin="5">
+                <TextBlock Name="TxtBlkStatusServer" Text="Status:"/>
+                <TextBlock Name="TxtBlkServerRec" Text="Received:"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
