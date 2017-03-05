@@ -93,7 +93,7 @@ namespace SocketClientUWP
             //Write data to the echo server.
             var streamOut = socket.OutputStream.AsStreamForWrite();
             var writer = new StreamWriter(streamOut);
-            const string request = "Request Test";
+            var request = TxtBoxMessage.Text;
             await writer.WriteLineAsync(request);
             await writer.FlushAsync();
 
