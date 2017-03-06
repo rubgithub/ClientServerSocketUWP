@@ -58,7 +58,7 @@ namespace BgSocketServer
                 var settings = ApplicationData.Current.LocalSettings;
                 settings.Values[_key] = request;
 
-                retSock.WriteString("HTTP/1.1 200 OK\r\nContent-Length: 2\r\nConnection: close\r\n\r\nOK");
+                retSock.WriteString($"HTTP/1.1 200 OK {DateTime.Now}\r\nContent-Length: 2\r\nConnection: close\r\n\r\nOK");
                 await retSock.StoreAsync();
                 //_deferral.Complete(); //if enabled, it finishs background task and stops working.
             }
